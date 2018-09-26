@@ -66,3 +66,62 @@ binary, for any purpose, commercial or non-commercial, and by any means.
 内置的distutils库在Python 3.7中开始采用这种行为。
 如果您使用setuptools，则不需要在MANIFEST.in中列出README.rst。
 否则，包括它是明确的。
+
+
+# 本地仓库连接远程仓库
+# 在本地创建一个目录用于当做仓库。
+
+$ mkdir git
+
+$ cd git
+
+# 初始化本地仓库
+
+$ git init
+Initialized empty Git repository in C:/Users/Tony/Desktop/git/git/.git/
+
+# 连接远程仓库
+
+$ git remote add origin git@github.com:TonySudo/git_test.git
+
+# origin 是定义的远程主机的名字， origin 是远程仓库的网址
+
+如果git remote连接时出现错误
+
+fatal: remote origin already exists.
+
+解决方法参考：
+
+http://blog.csdn.net/dengjianqiang2011/article/details/9260435
+
+$ git remote rm origin 
+
+再次运行之前的命令就可以成功。
+
+# 查看远程仓库的名字：
+
+$ git remote -v
+origin  git@github.com:TonySudo/git_exe.git (fetch)
+origin  git@github.com:TonySudo/git_exe.git (push)
+
+# 上传文件
+
+$ touch master
+
+$ git add master
+
+$ git commit -m "init push"
+[master (root-commit) f88dd2b] init push
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 master
+
+$ git push -u origin master
+
+如果出现错误。
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+$ git push --set-upstream origin master
+
