@@ -1,8 +1,17 @@
+
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Note: To use the 'upload' functionality of this file, you must:
 #   $ pip install twine
+
+# 这是您的项目各个方面的配置文件。 setup.py的主要功能是它包含一个全局setup（）函数。
+# 此函数的关键字参数是您的项目的具体细节是如何定义的。 最相关的论点将在下面的部分进行解释
+# 这是用于运行与打包任务相关的各种命令的命令行界面。 要获取可用命令的列表，请运行python
+# setup.py - -help - commands。
+
+
 
 import io
 import os
@@ -15,10 +24,10 @@ from setuptools import find_packages, setup, Command
 NAME = 'mypackage'
 DESCRIPTION = 'My short description for my project.'
 URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+EMAIL = 'blankxyz@163.com'
+AUTHOR = 'nothing'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = None
+VERSION = 0.1
 
 # What packages are required for this module to be executed?
 REQUIRED = [
